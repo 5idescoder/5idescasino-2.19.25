@@ -1,0 +1,161 @@
+/* Login Page Styles */
+:root {
+    --primary-purple: #2b044e;
+    --primary-gradient: linear-gradient(135deg, #2b044e 0%, #000000 100%);
+    --glass-bg: rgba(43, 4, 78, 0.1);
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--primary-gradient);
+    position: relative;
+    overflow: hidden;
+}
+
+.login-container::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.login-box:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.login-box h2 {
+    margin: 0 0 20px;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.glass-button {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.toggle-form {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.toggle-form a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.toggle-form a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #ff6b6b;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.success-message {
+    color: #51cf66;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+/* Form transition animations */
+.form-container {
+    position: relative;
+    transition: height 0.3s ease;
+}
+
+.form-slide {
+    transition: all 0.3s ease;
+}
+
+.form-slide.slide-out {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.form-slide.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+}

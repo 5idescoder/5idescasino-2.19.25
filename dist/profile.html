@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile - Arcade Games</title>
+  <link rel="stylesheet" crossorigin href="/assets/profile-CnVQVO_S.css">
+  <link rel="stylesheet" crossorigin href="/assets/styles-BU5Uxge1.css">
+</head>
+<body>
+    <div id="auth-status" class="auth-status">
+        <span id="user-display"></span>
+        <button id="auth-button" class="glass-button">Login</button>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1>Player Profile</h1>
+            <a href="index.html" class="glass-button">Back to Games</a>
+        </div>
+        
+        <div class="profile-content">
+            <div class="profile-info glass-panel">
+                <h2>Account Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Username:</label>
+                        <span id="profile-username"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Email:</label>
+                        <span id="profile-email"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Member Since:</label>
+                        <span id="profile-joined"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-stats glass-panel">
+                <h2>Game Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Fish Game</h3>
+                        <p>High Score: <span id="fish-score">0</span></p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Plinko</h3>
+                        <p>Coins: <span id="plinko-score">0</span></p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Keno</h3>
+                        <p>Coins: <span id="keno-score">0</span></p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Slot Machine</h3>
+                        <p>Coins: <span id="slot-score">0</span></p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Spin Game</h3>
+                        <p>Coins: <span id="spin-score">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-activity glass-panel">
+                <h2>Recent Activity</h2>
+                <div id="last-game" class="last-game">
+                    <h3>Last Played Game:</h3>
+                    <p id="last-game-name">None</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

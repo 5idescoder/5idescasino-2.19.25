@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Arcade Games</title>
+  <link rel="stylesheet" crossorigin href="/assets/login-BiNRzPgt.css">
+  <link rel="stylesheet" crossorigin href="/assets/styles-BU5Uxge1.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div id="login-form-container" class="form-container">
+                <form id="login-form" class="form-slide">
+                    <h2>Welcome Back</h2>
+                    <div id="login-error" class="error-message"></div>
+                    <div class="form-group">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="glass-button">Login</button>
+                    <p class="toggle-form">
+                        New user? <a href="#" id="show-register">Create an account</a>
+                    </p>
+                </form>
+            </div>
+
+            <div id="register-form-container" class="form-container" style="display: none;">
+                <form id="register-form" class="form-slide">
+                    <h2>Create Account</h2>
+                    <div id="register-error" class="error-message"></div>
+                    <div class="form-group">
+                        <label for="register-username">Username</label>
+                        <input type="text" id="register-username" placeholder="Choose a username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" placeholder="Choose a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm-password">Confirm Password</label>
+                        <input type="password" id="register-confirm-password" placeholder="Confirm your password" required>
+                    </div>
+                    <button type="submit" class="glass-button">Create Account</button>
+                    <p class="toggle-form">
+                        Already have an account? <a href="#" id="show-login">Login</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

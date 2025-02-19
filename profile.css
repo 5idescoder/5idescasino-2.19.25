@@ -1,0 +1,135 @@
+.profile-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    width: 85%;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    background: linear-gradient(45deg, #fff, #66a3ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Game Tabs */
+.game-tabs {
+    display: flex;
+    gap: 2px;
+    margin-bottom: -1px;
+}
+
+.game-tab {
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px 10px 0 0;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.game-tab:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.game-tab.active {
+    background: var(--glass-bg);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+/* History Table */
+.history-container {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 0 10px 10px 10px;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.history-table th,
+.history-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.history-table th {
+    background: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+.history-table tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.history-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Amount Styling */
+.amount {
+    font-family: monospace;
+    font-size: 1.1em;
+}
+
+.amount.positive {
+    color: #51cf66;
+}
+
+.amount.negative {
+    color: #ff6b6b;
+}
+
+/* IP Address */
+.ip-address {
+    font-family: monospace;
+    color: #66a3ff;
+}
+
+/* Date/Time */
+.datetime {
+    white-space: nowrap;
+    color: #ffd700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .game-tabs {
+        flex-wrap: wrap;
+    }
+
+    .game-tab {
+        flex: 1 1 auto;
+        text-align: center;
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
